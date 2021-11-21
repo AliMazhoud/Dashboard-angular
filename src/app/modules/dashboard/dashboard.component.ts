@@ -9,11 +9,15 @@ import { DashboardService } from '../dashboard.service';
 export class DashboardComponent implements OnInit {
 
   bigChart:any
+  cards:any;
+  pieChart:any;
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.bigChart = this.dashboardService.bigChart();
+    this.cards = this.dashboardService.cards();
+    this.pieChart = this.dashboardService.pieChart();
   }
 
 }
